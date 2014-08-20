@@ -1,0 +1,17 @@
+{
+  "name": "webcalendar_FE",
+  "version": "0.0.1",
+  "main": "styleshees/all.css",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "<name>": "<version>",
+    "<name>": "<folder>",
+    "<name>": "<package>"
+  },
+  "devDependencies": {
+    "<test-framework-name>": "<version>"
+  }
+}
