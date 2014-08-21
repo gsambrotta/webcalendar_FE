@@ -1,15 +1,25 @@
 {
   "name": "webcalendar_FE",
   "version": "0.0.1",
-  "main": "styleshees/all.css",
+  "main": "stylesheets/all.css",
+  "homepage": "https://github.com/gsambrotta/webcalendar_FE",
+  "authors": [
+    "Giorgia Sambrotta <g.sambrotta@gmail.com>"
+  ],
+  "description": "Frontend of the carolinagc/webcalendar",
+  "license": "MIT",
   "ignore": [
     ".jshintrc",
-    "**/*.txt"
+    "**/*.txt",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
   ],
   "dependencies": {
-    "<name>": "<version>",
-    "<name>": "<folder>",
-    "<name>": "<package>"
+    "ember": "~1.7.0",
+    "modernizr": "~2.8.3"
   },
   "devDependencies": {
     "<test-framework-name>": "<version>"
