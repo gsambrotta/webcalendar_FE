@@ -5,9 +5,12 @@ $path-fonts: "../fonts/";
 @import "base_elements/reset";
 @import "base_elements/colors";
 @import "base_elements/typo";
-@import "base_elements/images-vars";
+@import "base_elements/img-vars";
 @import "base_elements/helper-classes";
 @import "base_elements/buttons";
+
+//Font Awesome
+@import "../../bower_components/fontawesome/scss/font-awesome.scss";
 
 
 // TEMPLATES

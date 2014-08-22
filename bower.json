@@ -19,9 +19,9 @@
   ],
   "dependencies": {
     "ember": "~1.7.0",
-    "modernizr": "~2.8.3"
+    "modernizr": "~2.8.3",
+    "fontawesome": "4.1.0",
+    "ember-data": "~0.0.14"
   },
-  "devDependencies": {
-    "<test-framework-name>": "<version>"
-  }
+  "devDependencies": {}
 }
