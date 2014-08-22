@@ -1,0 +1,14 @@
+$path-images: "../images/";
+$path-fonts: "../fonts/";
+
+//BASE ELEMENTS
+@import "base_elements/reset";
+@import "base_elements/colors";
+@import "base_elements/typo";
+@import "base_elements/images-vars";
+@import "base_elements/helper-classes";
+@import "base_elements/buttons";
+
+
+// TEMPLATES
+@import "templates/base";
