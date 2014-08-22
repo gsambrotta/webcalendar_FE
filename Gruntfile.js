@@ -27,13 +27,13 @@ module.exports = function(grunt){
 		emberTemplates: {
 			compile: {
 				options: {
-					amd: true,
+					templateBasePath: /app\/templates\//,
 					preprocess: function(source){
 						return source.replace(/\s+g/, '');
 					}
 				},
 				files: {
-					"app/templates/compiledTemplates.js": "app/templates/*.handlebars"
+					"app/templates/compiledTemplates.js": "app/templates/*.hbs"
 				}	
 			}
 		},
@@ -70,13 +70,13 @@ module.exports = function(grunt){
 				tasks: ['jshint:gruntfile'],
 			},
 			scripts: {
-				files: ['app/ember/**/*.js', 'app/stylesheets/**/*.scss', 'app/templates/**/*.handlebars'],
+				files: ['app/ember/**/*.js', 'app/stylesheets/**/*.scss', 'app/templates/**/*.hbs'],
 				tasks: ['development', 'jshint', 'sass', 'emberTemplates']
 			}
 		}
 	});
 
-	grunt.registerTask('dev', ['sass', 'emberTemplates', 'jshint', 'watch']);
+	grunt.registerTask('development', ['sass', 'emberTemplates', 'jshint', 'watch']);
 	grunt.registerTask('production', ['sass', 'emberTemplates', 'jshint', 'uglify']);
 	grunt.registerTask('test', ['jshint']);
 };
