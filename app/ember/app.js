@@ -1,4 +1,8 @@
 window.WebCalendar = Ember.Application.create();
 
-WebCalendar.Store = DS.Store.extend();
-//WebCalendar.ApplicationAdapter = DS.FixtureAdapter.extend(); 
+WebCalendar.ApplicationAdapter = DS.FixtureAdapter.extend();
+
+WebCalendar.Store = DS.Store.extend({
+	revision: 12,
+	adapter: 'DS.FixtureAdapter'
+});
