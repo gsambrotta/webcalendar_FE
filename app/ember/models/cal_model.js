@@ -18,7 +18,7 @@ WebCalendar.Cal.FIXTURES = [
 	                     'May', 'June', 'July', 'August', 'September',
 	                     'October', 'November', 'December'],
 
-	    "days_per_month": [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+	  "days_per_month": [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
 	}
 ];
 
