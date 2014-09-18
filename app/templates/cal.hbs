@@ -1,9 +1,10 @@
 <div class="calendar">
 	{{#each}}
-		{{current-date date=data}}
 		{{#if days_label.length}}
 			{{days_label.[1]}}
 		{{/if}}
 	{{/each}}
+
+	{{component/current-date dateNameTemp=date}}
 
 </div>

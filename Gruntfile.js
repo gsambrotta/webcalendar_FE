@@ -33,7 +33,7 @@ module.exports = function(grunt){
 					}
 				},
 				files: {
-					"app/templates/compiledTemplates.js": "app/templates/*.hbs"
+					"app/templates/compiledTemplates.js": "app/templates/**/*.hbs"
 				}	
 			}
 		},
