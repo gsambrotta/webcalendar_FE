@@ -10,15 +10,7 @@ WebCalendar.Cal = DS.Model.extend({
 WebCalendar.Cal.FIXTURES = [
 	{	
 		"id": 1,
-		"name": "Giorgia",
-
-		"days_label": ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-
-		"months_label": ['January', 'February', 'March', 'April',
-										 'May', 'June', 'July', 'August', 'September',
-										 'October', 'November', 'December'],
-
-		"days_per_month": [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+		"name": "Test",
 	}
 ];
 

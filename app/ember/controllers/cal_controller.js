@@ -6,10 +6,6 @@ WebCalendar.CalController = Ember.ArrayController.extend({
 		}
 	},
 
-	CurrentDate: function(){ 
-		var today = new Date(); 
-	},
-
 	updateContent: function() {
 		return this.get('model').content;
 	}.property('model')
