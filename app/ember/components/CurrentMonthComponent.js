@@ -8,30 +8,33 @@ WebCalendar.CurrentMonthComponent = Ember.Component.extend({
 	}.property('today'),
 
   
-	setCalendar: function(showMonth){ 
+	setCalendar: function(monthView){ 
+    this.dateNames(); //Why I HAVE to Call it?
+
 
   	var today = this.get('today');
     var currentYear = today.getFullYear();
   	var currentMonth = today.getMonth(); //month in number
     var currentDayOfWeek = today.getDay();
-    var firstDayCurrentMonth = new Date(1, currentMonth, currentYear); //first day of current month
-	
-		this.dateNames();
-    var showMonth = monthNamesArray[currentMonth]; //current month srting
-		console.log("monthName", showMonth);
-
+    var firstDay = new Date(currentYear, currentMonth, 1); //first day of current month
+    var firstDayOfWeek = daysLabel[firstDay.getDay()]; // first dayOfTheWeek of current month
+	  var showMonth = monthNamesArray[currentMonth]; //current month string
     var showWeekDay = daysLabel[currentDayOfWeek]; //current day of the week
-    console.log("daysLabel", showWeekDay);
+    var totDayInMonth = daysPerMonth[currentMonth]; //how many days are in the current month
 
-    var numbDayInMonth = daysPerMonth[currentMonth]; //how many days are in the current month
-    console.log("daysPerMonth", numbDayInMonth);
+    console.log("firstDay:", firstDay);
+    console.log("firstDayOfWeek:", firstDayOfWeek);
+    console.log("monthName", showMonth);
+    console.log("daysLabel", showWeekDay);
+    console.log("daysPerMonth", totDayInMonth);
 
     //Array with all the day of the current month
     days = [];
-    for(i = 0; i = numbDayInMonth.length ; i++){
-        console.log('days', days);
-        return days = days[i];
-    };
+    for(i = 1; i <= totDayInMonth; i++){
+       days.push(i);
+    }
+    return days;
+    console.log('days', days);
 
     // Check which DayOfTheWeek is the firstDayOfTheMonth,
     // then insert in the right coloumn

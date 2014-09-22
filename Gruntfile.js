@@ -1,5 +1,3 @@
-/*jshint sub:true*/
-
 module.exports = function(grunt){
 
 	grunt.loadNpmTasks('grunt-contrib-compress');
