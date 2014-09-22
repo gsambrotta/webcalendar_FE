@@ -1,3 +1,5 @@
+/*jshint sub:true*/
+
 module.exports = function(grunt){
 
 	grunt.loadNpmTasks('grunt-contrib-compress');
@@ -41,11 +43,12 @@ module.exports = function(grunt){
 		jshint: {
 			files: ['Gruntfile.js', 'app/**/*.js'],
 			options: {
+					"sub": true,
 					globals: {
-						jQuery: true,
-						console: true,
-						module: true,
-						document: true
+						"jQuery": true,
+						"console": true,
+						"module": true,
+						"document": true
 					}
 			}
 		},

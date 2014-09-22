@@ -5,3 +5,4 @@
 bower_components/
 
 /compiledTemplates.js
+app/templates/compiledTemplates.js
