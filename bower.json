@@ -22,7 +22,8 @@
     "ember": "~1.7.0",
     "modernizr": "~2.8.3",
     "fontawesome": "4.1.0",
-    "ember-data": "~0.0.14"
+    "ember-data": "~0.0.14",
+    "moment": "~2.8.3"
   },
   "devDependencies": {},
   "resolutions": {

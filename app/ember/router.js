@@ -7,9 +7,14 @@ WebCalendar.Router.map(function() {
 });
 
 
+WebCalendar.IndexRoute = Ember.Route.extend({
+	model: function(){
+		return this.store.find('dates');
+	}
+});
 
 WebCalendar.CalRoute = Ember.Route.extend({
 	model: function(){
-		return this.store.find('cal');
+		return this.store.find('dates');
 	}
 });

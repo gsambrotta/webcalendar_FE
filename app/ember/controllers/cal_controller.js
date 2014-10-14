@@ -1,12 +1,6 @@
 WebCalendar.CalController = Ember.ArrayController.extend({
+	getMonthDays: function(){
+		return this.get("today") + 1;
+	}.property('today')
 
-	actions: {
-		selectedMonth: function(){
-			//code
-		}
-	},
-
-	updateContent: function() {
-		return this.get('model').content;
-	}.property('model')
 });

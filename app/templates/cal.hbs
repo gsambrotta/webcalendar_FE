@@ -1,10 +1,21 @@
-<div class="calendar">
-	{{#each}}
-		{{#if days_label.length}}
-			{{days_label.[1]}}
-		{{/if}}
+<table>
+	{{#each date in controller}}
+	<tbody id="table">
+		<tr id="year">
+			<td>{{date.year}}</td>
+		</tr>
+		<tr>
+			<td id="prev-month"> Prev </td>
+			<td id="month">{{date.month}}</td>
+			<td id="next-month"> Next </td>
+		</tr>
+		
+		<tr id="days-of-week">
+			{{#each date.daysName}}
+				<td>{{this}}</td>
+			{{/each}}
+		</tr class="days">
+		<tr>{{getMonthDays}}</tr>
+	</tbody>
 	{{/each}}
-
-	{{current-month name=name}}
-
-</div>
+</table>

@@ -1,18 +1,24 @@
-WebCalendar.Cal = DS.Model.extend({
-	name: DS.attr('string'),
-	days_label: DS.attr('array'),
-	months_label: DS.attr('array'),
-	days_per_month: DS.attr('array')
-
+WebCalendar.Dates = DS.Model.extend({
+	today: DS.attr('date'),
+	month: DS.attr('date'),
+	year: DS.attr('date'),
+	daysName: DS.attr('array'),
+	daysInMonth: DS.attr('array')
 });
 
 
-WebCalendar.Cal.FIXTURES = [
+WebCalendar.Dates.FIXTURES = [
 	{	
-		"id": 1,
-		"name": "Test",
+		id: 1,
+		today: moment().format('MMMM Do YYYY, h:mm:ss a'), 
+		month: moment().format('MMM'),
+		year: moment().format('YYYY'),
+		daysName: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+		daysInMonth: [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ]
 	}
 ];
+
+
 
 
 DS.JSONTransforms.array = {
