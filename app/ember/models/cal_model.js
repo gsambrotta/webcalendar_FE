@@ -1,5 +1,9 @@
 WebCalendar.Dates = DS.Model.extend({
 	today: DS.attr('date'),
+	monthNumber: function(){
+		var today =  this.get('today');
+		return today.getMonth();
+	}.property('today'),
 	month: DS.attr('date'),
 	year: DS.attr('date'),
 	daysName: DS.attr('array'),
@@ -10,7 +14,7 @@ WebCalendar.Dates = DS.Model.extend({
 WebCalendar.Dates.FIXTURES = [
 	{	
 		id: 1,
-		today: moment().format('MMMM Do YYYY, h:mm:ss a'), 
+		today: new Date(), 
 		month: moment().format('MMM'),
 		year: moment().format('YYYY'),
 		daysName: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],

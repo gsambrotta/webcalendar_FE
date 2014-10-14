@@ -1,21 +1,27 @@
 <table>
-	{{#each date in controller}}
 	<tbody id="table">
-		<tr id="year">
-			<td>{{date.year}}</td>
-		</tr>
-		<tr>
-			<td id="prev-month"> Prev </td>
-			<td id="month">{{date.month}}</td>
-			<td id="next-month"> Next </td>
-		</tr>
-		
-		<tr id="days-of-week">
-			{{#each date.daysName}}
-				<td>{{this}}</td>
-			{{/each}}
+		{{#each date in controller}}
+			<tr id="year">
+				<td>{{date.year}}</td>
+			</tr>
+			<tr>
+				<td id="prev-month"> Prev </td>
+				<td id="month">{{date.month}}</td>
+				<td id="next-month"> Next </td>
+			</tr>
+			
+			<tr id="days-of-week">
+				{{#each date.daysName}}
+					<td>{{this}}</td>
+				{{/each}}
+			</tr>
+		{{/each}}
+
 		</tr class="days">
-		<tr>{{getMonthDays}}</tr>
+			{{#each days in controller}}
+			  	<td>{{days.getMonthDays}} Days</td>
+			{{/each}}
+		</tr>
 	</tbody>
-	{{/each}}
+	
 </table>
