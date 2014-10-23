@@ -1,5 +1,5 @@
 <table>
-	<tbody id="table">
+	<thead id="table">
 		{{#each date in controller}}
 			<tr id="year">
 				<td>{{date.year}}</td>
@@ -16,12 +16,15 @@
 				{{/each}}
 			</tr>
 		{{/each}}
-
-		</tr class="days">
+	</thead>
+	</tbody>
+		<tr class="days">
 			{{#each days in controller}}
 			  	<td>{{days.getMonthDays}} Days</td>
 			{{/each}}
 		</tr>
+
+		Hello, <b>{{view.name}}</b>
 	</tbody>
 	
 </table>

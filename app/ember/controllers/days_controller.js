@@ -3,9 +3,12 @@ WebCalendar.DaysController = Ember.ObjectController.extend({
 		var monthNumber = this.get("monthNumber");
 		var daysInMonth = this.get("daysInMonth");
 		var totDayInMonth = daysInMonth[monthNumber];
-		//console.log(totDayInMonth);
 
-		return totDayInMonth;
+		var days = [];
+		for( i = 1; i < totDayInMonth; i++){
+			days.push(i);
+		}
+		return days;
+
 	}.property('monthNumber')
-
 });
