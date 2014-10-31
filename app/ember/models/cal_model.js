@@ -7,9 +7,9 @@ WebCalendar.Dates = DS.Model.extend({
 	month: DS.attr('date'),
 	year: DS.attr('date'),
 	daysName: DS.attr('array'),
-	daysInMonth: DS.attr('array')
+	daysInMonth: DS.attr('array'),
+	weeks: DS.attr('number')
 });
-
 
 WebCalendar.Dates.FIXTURES = [
 	{	
@@ -18,7 +18,8 @@ WebCalendar.Dates.FIXTURES = [
 		month: moment().format('MMM'),
 		year: moment().format('YYYY'),
 		daysName: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-		daysInMonth: [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ]
+		daysInMonth: [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ],
+		weeks: new Array(6)
 	}
 ];
 
