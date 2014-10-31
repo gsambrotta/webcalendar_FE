@@ -1,5 +1,4 @@
 <table>
-	<tbody id="table">
 		{{#each date in controller}}
 			<tr id="year">
 				<td>{{date.year}}</td>
@@ -15,13 +14,32 @@
 					<td>{{this}}</td>
 				{{/each}}
 			</tr>
+
 		{{/each}}
 
-		</tr class="days">
-			{{#each days in controller}}
-			  	<td>{{days.getMonthDays}} Days</td>
-			{{/each}}
-		</tr>
-	</tbody>
-	
+	<tbody>
+
+	{{#each date in controller}}
+		{{#each date.formattedWeeks}}
+	  	<tr>
+	  		{{#each this}}
+	  			<td>{{this}}</td>
+	  		{{/each}}
+	  	</tr>
+	  	{{/each}}
+	{{/each}}
+
+	{{!--}}
+	{{#each date in controller}} 
+	  {{#each date.formattedWeeks}}
+	    <tr>
+	      {{#each this}}
+	          <td>{{this}}</td>
+	      {{/each}}
+	    </tr>
+	  {{/each}}
+	{{/each}}
+	{{--}}
+
+	</tbody>	
 </table>
